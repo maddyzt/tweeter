@@ -4,6 +4,11 @@
   justify-content: center;
 }
 
+.tweet-label {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .tweet-btn {
   display: flex;
   font-family: "Bungee";
@@ -19,8 +24,9 @@
   border: none;
   resize: none;
   border-bottom: 3px solid black;
+  margin-top: 0.5em;
 }
-s
+
 .counter {
   display: flex;
   justify-content: flex-end;
