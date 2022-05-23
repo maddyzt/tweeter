@@ -1,0 +1,30 @@
+.tweet-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tweet-btn {
+  display: flex;
+  font-family: "Bungee";
+  background-color: #4056A1;
+  color: white;
+  border: 0;
+  margin: 0.5em;
+  justify-content: flex-start;
+}
+
+.tweet-input {
+  background-color: #f4f1ec;
+  border: none;
+  resize: none;
+  border-bottom: 3px solid black;
+}
+s
+.counter {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Bungee";
+  transform: translateY(-45px); 
+}
+
