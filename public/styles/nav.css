@@ -8,6 +8,7 @@ nav {
   background-color: #4056A1;
   font-family: "Source Sans Pro";
   text-align: center;
+  position: relative;
 }
 
 .nav-logo {
