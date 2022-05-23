@@ -1,0 +1,28 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  color: #FFFFFF;
+  background-color: #4056A1;
+  font-family: "Source Sans Pro";
+  text-align: center;
+}
+
+.nav-logo {
+  height: 120px;
+  font-family: "Bungee";
+  vertical-align: middle;
+  padding: 2em 1.5em 1.5em 1.5em;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+}
+
+.red-color {
+  color: red;
+}
