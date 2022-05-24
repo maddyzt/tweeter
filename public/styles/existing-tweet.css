@@ -1,0 +1,96 @@
+.tweet-container {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid darkslategrey;
+}
+
+.tweet-container:hover {
+  box-shadow: 5px 5px 1px slategrey;
+}
+
+.tweet-header {
+  height: 70px;
+}
+
+.tweet-user {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.5em;
+}
+
+#smiley {
+  display: flex;
+  justify-content: flex-start;
+  transform: translateY(1px);
+  margin-right: 2%;
+  color: darkslategrey;
+}
+
+.username {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5em;
+  transform: translateY(-55px); 
+}
+
+.tweet {
+  margin-left: 1%;
+  margin-right: 1%;
+  border-bottom: 3px solid darkslategrey;
+}
+
+.input-text {
+  display: flex;
+  justify-content: flex-start;
+  font-size: .8em;
+  padding-left: 0.5em;
+  padding-bottom: 1em;
+}
+
+.tweet-footer {
+  margin-top: 0.5em;
+}
+
+.tweet-date {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 1em;
+  font-size: .5em;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: flex-end;
+  transform: translateY(-10px);
+  font-size: 0.8em;
+  margin-right: 1em;
+}
+
+.flag {
+  display: flex;
+  margin-left: 0.5em;
+}
+
+.flag:hover {
+  color: goldenrod;
+}
+
+.retweet {
+  display: flex;
+  margin-left: 0.5em;
+}
+
+.retweet:hover {
+  color: goldenrod;
+}
+
+.heart {
+  display: flex;
+  margin-left: 0.5em;
+}
+
+.heart:hover {
+  color: goldenrod;
+}

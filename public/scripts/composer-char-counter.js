@@ -4,7 +4,7 @@ $(document).ready(function() {
     let charCount = $(this).val().length;
     let remaining = 140 - charCount;
 
-    let counter = $(this).parent().next('div').find('.counter');
+    let counter = $(this).parent().find('.counter');
     counter.text(remaining);
 
     if (remaining < 0) {
