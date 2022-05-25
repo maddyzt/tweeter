@@ -6,6 +6,15 @@
 
 $(document).ready(function() {
 
+// show/hide the form when the arrow is clicked in the nav
+$('.new-tweet').hide();
+
+$('.down-arrow').click(function() {
+  $('.new-tweet').slideToggle();
+  $('.tweet-input').focus();
+})
+
+
 // define escape function
 const escape = function (str) {
   let div = document.createElement("div");

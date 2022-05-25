@@ -24,6 +24,11 @@ nav {
   padding: 1.5em;
 }
 
-.red-color {
+.down-arrow {
   color: red;
 }
+
+.down-arrow:hover {
+  color: goldenrod;
+}
+
