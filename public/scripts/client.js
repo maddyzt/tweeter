@@ -8,12 +8,26 @@ $(document).ready(function() {
 
 // show/hide the form when the arrow is clicked in the nav
 $('.new-tweet').hide();
-
 $('.down-arrow').click(function() {
   $('.new-tweet').slideToggle();
   $('.tweet-input').focus();
 })
 
+// show scroll button upon scroll down
+let $btn = $('.scroll-btn');
+$btn.hide();
+$(window).scroll(function() {
+  if($(window).scrollTop() > 300) {
+    $btn.show();
+  } else {
+    $btn.hide();
+  }
+})
+
+// scroll to top on click
+$('.scroll-btn').click(function() {
+    window.scrollTo(0, 0);
+})
 
 // define escape function
 const escape = function (str) {
