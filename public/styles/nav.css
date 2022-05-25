@@ -9,6 +9,7 @@ nav {
   font-family: "Source Sans Pro";
   text-align: center;
   position: fixed;
+  z-index: 1;
 }
 
 .nav-logo {
