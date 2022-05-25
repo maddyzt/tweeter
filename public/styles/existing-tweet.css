@@ -46,6 +46,8 @@
   font-size: .8em;
   padding-left: 0.5em;
   padding-bottom: 1em;
+  overflow-wrap: anywhere;
+  text-align: left;
 }
 
 .tweet-footer {

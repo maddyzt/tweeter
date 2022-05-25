@@ -40,12 +40,25 @@ const renderTweets = function(tweetArray) {
 const postTweets = function () {
   $('#tweet-form').submit(function(event) {
   event.preventDefault();
+
+  if ($('.tweet-input').val().length > 140) {
+    return $('.error-text').text('Character length exceeded');
+  } else if ($('.tweet-input').val().length === 0) {
+    return $('.error-text').text('Cannot post 0 characters');
+  }
+
   $.ajax({
     url: "/tweets",
     method: "POST",
     data: $(this).serialize()
+  }).then(response => {
+    $('.error-text').text('');
+    $('#tweet-form').children('.tweet-input').val('');
+    $('.counter').val(140);
+    loadTweets();
   }).catch(err => console.log(err));
-})};
+}
+)};
 
 // function to load tweets
 const loadTweets = function () {
@@ -57,7 +70,8 @@ const loadTweets = function () {
   })
 }
 
-postTweets();
 loadTweets();
+postTweets();
+
 
 });

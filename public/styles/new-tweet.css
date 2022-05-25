@@ -39,3 +39,11 @@
   margin-top: 0.5em;
 }
 
+
+.error-text {
+  display: flex;
+  justify-content: flex-start;
+  font-size: .8em;
+  color: red;
+  margin-top: 0.5em;
+}

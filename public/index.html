@@ -25,7 +25,7 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
@@ -59,6 +59,7 @@
         <h2>Compose Tweet</h2>
         <form class="tweet-form" id="tweet-form" method="POST" action="/tweets">
           <label for="tweet-text" class="tweet-label">What are you humming about?</label>
+          <div class="error-text"></div>
           <textarea name="text" id="tweet-text" class="tweet-input"></textarea>
           <div class="tweet-div">
             <!-- <button type="submit" class="tweet-btn" id="tweet-btn">Tweet</button> -->
