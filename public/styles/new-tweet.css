@@ -10,13 +10,9 @@
 }
 
 .tweet-btn {
-  display: flex;
   font-family: "Bungee";
   background-color: #4056A1;
   color: white;
-  border: 0;
-  margin: 0.5em;
-  justify-content: flex-start;
 }
 
 .tweet-input {
@@ -30,9 +26,16 @@
 }
 
 .counter {
-  display: flex;
+
   justify-content: flex-end;
   font-family: "Bungee";
-  transform: translateY(-45px); 
+
+}
+
+.tweet-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0.5em;
 }
 

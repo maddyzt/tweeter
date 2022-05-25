@@ -5,31 +5,6 @@
  */
 
 $(document).ready(function() {
-  // sample tweet object
-const tweetData = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
 
 // function to transform tweet object into html
 const createTweetElement = function(tweetObject) {
@@ -41,7 +16,7 @@ const createTweetElement = function(tweetObject) {
         </header>
         <div class="tweet"><span class="input-text">${tweetObject.content.text}</span></div>
         <footer class="tweet-footer">
-          <span class="tweet-date">${tweetObject.created_at}</span>
+          <span class="tweet-date">${timeago.format(tweetObject.created_at)}</span>
           <span class="icons">
             <i class="fa-solid fa-flag flag"></i>
             <i class="fa-solid fa-retweet retweet"></i>
@@ -61,5 +36,28 @@ const renderTweets = function(tweetArray) {
   })
 };
 
-renderTweets(tweetData);
-})
+// function to post tweets
+const postTweets = function () {
+  $('#tweet-form').submit(function(event) {
+  event.preventDefault();
+  $.ajax({
+    url: "/tweets",
+    method: "POST",
+    data: $(this).serialize()
+  }).catch(err => console.log(err));
+})};
+
+// function to load tweets
+const loadTweets = function () {
+  $.ajax({
+    url: "/tweets",
+    method: "GET",
+  }).then(function(response) {
+    renderTweets(response);
+  })
+}
+
+postTweets();
+loadTweets();
+
+});
