@@ -45,5 +45,7 @@
   justify-content: flex-start;
   font-size: .8em;
   color: red;
-  margin-top: 0.5em;
+  margin-bottom: 1em;
+  font-weight: 600;
+  font-style: italic;
 }
