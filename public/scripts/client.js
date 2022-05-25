@@ -6,15 +6,22 @@
 
 $(document).ready(function() {
 
+// define escape function
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 // function to transform tweet object into html
 const createTweetElement = function(tweetObject) {
   let tweet = `
       <article class="tweet-container">
         <header class="tweet-header">
-          <span class="tweet-user"><i id="smiley" class="fa-solid fa-face-grin-stars"></i>${tweetObject.user.name}</span>
-          <span class="username">${tweetObject.user.handle}</span>
+          <span class="tweet-user"><i id="smiley" class="fa-solid fa-face-grin-stars"></i>${escape(tweetObject.user.name)}</span>
+          <span class="username">${escape(tweetObject.user.handle)}</span>
         </header>
-        <div class="tweet"><span class="input-text">${tweetObject.content.text}</span></div>
+        <div class="tweet"><span class="input-text">${escape(tweetObject.content.text)}</span></div>
         <footer class="tweet-footer">
           <span class="tweet-date">${timeago.format(tweetObject.created_at)}</span>
           <span class="icons">
