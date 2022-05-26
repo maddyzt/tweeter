@@ -90,3 +90,15 @@
 .heart:hover {
   color: goldenrod;
 }
+
+/* Responsive design CSS below */
+
+@media screen and (min-width: 1024px) {
+
+  .container {
+    width: 55%;
+    float: right;
+    margin-top: 16%;
+  }
+
+}

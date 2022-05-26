@@ -34,6 +34,7 @@ body {
   text-align: center;
   margin-left: 5%;
   margin-right: 5%;
+  padding-top: 0.5em;
   background-color: #f4f1ec;
 }
 
@@ -49,3 +50,4 @@ body {
   margin: 1em;
   padding: 0.8em 1em 0.8em 1em;
 }
+

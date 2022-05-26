@@ -70,13 +70,16 @@ const renderTweets = function(tweetArray) {
 const postTweets = function () {
   $('#tweet-form').submit(function(event) {
   event.preventDefault();
-
+  const triangleAlert = `<i class="fa-solid fa-triangle-exclamation"></i>`
+  const errorMessage1 = `<span>${triangleAlert} Cannot post 0 characters ${triangleAlert}</span>`;
+  const errorMessage2 = `<span>${triangleAlert} Maximum character length exceeded ${triangleAlert}</span>`;
+  
   $('.error-text').slideUp(400).text('');
 
   if ($('.tweet-input').val().length > 140) {
-    return $('.error-text').text('Character length exceeded').slideDown();
+    return $('.error-text').html(errorMessage2).slideDown();
   } else if ($('.tweet-input').val().length === 0) {
-    return $('.error-text').text('Cannot post 0 characters').slideDown();
+    return $('.error-text').html(errorMessage1).slideDown();
   }
 
   $.ajax({
@@ -84,7 +87,6 @@ const postTweets = function () {
     method: "POST",
     data: $(this).serialize()
   }).then(response => {
-    // $('.error-text').text('');
     $('#tweet-form').children('.tweet-input').val('');
     $('.counter').val(140);
     loadTweets();

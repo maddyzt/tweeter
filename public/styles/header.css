@@ -8,3 +8,22 @@
   background-color: #db8aa8;
   background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
 }
+
+
+/* Responsive design CSS below */
+
+@media screen and (min-width: 1024px) {
+
+  .header-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    } 
+
+  .avatar-header {
+    height: 400px;
+    width: 33%;
+    margin-top: 20%;
+  }
+
+}
