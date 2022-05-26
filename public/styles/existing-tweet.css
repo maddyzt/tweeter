@@ -10,29 +10,22 @@
 }
 
 .tweet-header {
+  display: flex;
+  justify-content: space-between;
   height: 70px;
+  padding: 0.5em;
 }
 
 .tweet-user {
   display: flex;
   justify-content: flex-start;
-  padding: 0.5em;
+  gap: 0.5em;
 }
 
 #smiley {
-  display: flex;
-  justify-content: flex-start;
-  transform: translateY(1px);
-  margin-right: 2%;
   color: darkslategrey;
 }
 
-.username {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.5em;
-  transform: translateY(-55px); 
-}
 
 .tweet {
   margin-left: 1%;

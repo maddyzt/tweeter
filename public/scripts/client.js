@@ -42,7 +42,7 @@ const createTweetElement = function(tweetObject) {
       <article class="tweet-container">
         <header class="tweet-header">
           <span class="tweet-user"><i id="smiley" class="fa-solid fa-face-grin-stars"></i>${escape(tweetObject.user.name)}</span>
-          <span class="username">${escape(tweetObject.user.handle)}</span>
+          <span>${escape(tweetObject.user.handle)}</span>
         </header>
         <div class="tweet"><span class="input-text">${escape(tweetObject.content.text)}</span></div>
         <footer class="tweet-footer">
