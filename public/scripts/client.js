@@ -74,8 +74,11 @@ $(document).ready(function() {
       const errorMessage1 = `<span>${triangleAlert} Cannot post 0 characters ${triangleAlert}</span>`;
       const errorMessage2 = `<span>${triangleAlert} Maximum character length exceeded ${triangleAlert}</span>`;
   
-      $('.error-text').slideUp(400).text('');
-
+      // console.log($('.error-text')[0].textContent);
+      if ($('.error-text')[0].textContent.length > 0) {
+        $('.error-text').slideUp().text('');
+      }
+      
       if ($('.tweet-input').val().length > 140) {
         return $('.error-text').html(errorMessage2).slideDown();
       } else if ($('.tweet-input').val().length === 0) {
@@ -97,6 +100,7 @@ $(document).ready(function() {
 
   // function to load tweets
   const loadTweets = function() {
+    $('#tweet-list').empty();
     $.ajax({
       url: "/tweets",
       method: "GET",
@@ -107,6 +111,5 @@ $(document).ready(function() {
 
   loadTweets();
   postTweets();
-
 
 });
