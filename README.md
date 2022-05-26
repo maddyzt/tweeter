@@ -1,12 +1,18 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a single-page, dynamic Twitter clone.
+- Utilizes HTML, CSS, JavaScript, jQuery (frontend) and NodeJS, Express (backend).
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+## Sneak Peek
 
-## Screenshots
 !["Screenshot of tweet compose box"](https://github.com/maddyzt/tweeter/blob/master/public/images/ss1.png?raw=true)
 !["Screenshot of tweets"](https://github.com/maddyzt/tweeter/blob/master/public/images/ss2.png?raw=true)
+
+## Features
+
+- Dynamic character counter and validation rules to ensure tweets are within the 140 character limit
+- Ability to toggle on/off the compose tweet section
+- Responsive design for both mobile and desktop
 
 ## Getting Started
 
