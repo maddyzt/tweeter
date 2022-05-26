@@ -26,7 +26,7 @@ $(window).scroll(function() {
 
 // scroll to top on click
 $('.scroll-btn').click(function() {
-    window.scrollTo(0, 0);
+  $('html,body').animate({ scrollTop: 0 }, 'fast');
 })
 
 // define escape function
