@@ -10,6 +10,7 @@ Tweeter is a single-page, dynamic Twitter clone.
 
 ## Features
 
+- Tweets are rendered and displayed in  real time
 - Dynamic character counter and validation rules to ensure tweets are within the 140 character limit
 - Ability to toggle on/off the compose tweet section
 - Responsive design for both mobile and desktop
